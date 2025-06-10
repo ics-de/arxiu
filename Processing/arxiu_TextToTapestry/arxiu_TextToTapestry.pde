@@ -1,9 +1,19 @@
-String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
-String[] file;
-String text = "";
+//arxiu_TextToTapestry - Oriol Colomer Delgado, 2025
+//
+//arxiu | Treball Final de Postgrau. Postgrau en Escena i Tecnologia Digital, Institut del Teatre (2024-2025)
 
+String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
+
+
+//Parameters------------
+String fileName = "text.txt";
 int tileSize = 50;
 boolean drawText = true;
+
+//----------------------
+
+String[] file;
+String text = "";
 
 void setup() {
   size(900, 900);
@@ -11,7 +21,7 @@ void setup() {
   background(0);
   println("dictionary length: " + dictionary.length());
 
-  file = loadStrings("text.txt");
+  file = loadStrings(fileName);
   text = join(file, "");
   drawTapestryRect();
   if(drawText){
