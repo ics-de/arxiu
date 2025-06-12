@@ -10,11 +10,16 @@ String fileName = "text.txt";
 int tileSize = 6;
 boolean drawText = true;
 boolean sortText = false;
+boolean updateTextFile = true;
 
 //----------------------
 
 String[] file;
 String text = "";
+
+//Speech Recog Settings
+int previousMillis = 0;
+int interval = 1000;
 
 void setup() {
   size(1000, 1000);
@@ -22,19 +27,18 @@ void setup() {
   background(0);
   println("dictionary length: " + dictionary.length());
 
-  file = loadStrings(fileName);
-  text = join(file, "");
-  
-  if(sortText){
-  SortText();
+  UpdateTextFile();
+
+  if (sortText) {
+    SortText();
   }
-  
-  
+
+
   calcTileSize();
   drawTapestryRect();
-  
-  if(drawText){
-   drawText(); 
+
+  if (drawText) {
+    drawText();
   }
 
   delay(100);
@@ -42,6 +46,15 @@ void setup() {
 }
 
 void draw() {
+  if (updateTextFile) {
+    int currentMillis = millis();
+
+    if (currentMillis - previousMillis > interval)
+    {
+      UpdateTextFile();
+      previousMillis = currentMillis;
+    }
+  }
 }
 
 void drawTapestryPixel() {
@@ -61,7 +74,7 @@ void drawTapestryRect() {
         noStroke();
         fill(getColorAtValue(text.charAt(index)));
         rect(x*tileSize, y*tileSize, tileSize, tileSize);
-        
+
         index ++;
       }
     }
@@ -104,14 +117,20 @@ color getColorAtValue(char val) {
   return col;
 }
 
-void SortText(){
+void UpdateTextFile() {
+  file = loadStrings(fileName);
+  text = join(file, "");
+  println("text file updated");
+}
+
+void SortText() {
   String newText = "";
   char[] charList = text.toCharArray();
   newText = new String(sort(charList));
-  
+
   text = newText;
 }
 
-void calcTileSize(){
+void calcTileSize() {
   //tileSize = int(width*height/text.length() * 0.1f);
 }
