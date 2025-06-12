@@ -6,7 +6,7 @@ String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
 
 
 //Parameters------------
-int tileSize = 50;
+int tileSize = 25;
 boolean drawText = true;
 
 //----------------------
@@ -18,7 +18,7 @@ int x = 0;
 int y = 0;
 
 void setup() {
-  size(900, 900);
+  size(1500, 1500);
   colorMode(HSB, 100.0, 100.0, 100.0);
   background(0);
   println("dictionary length: " + dictionary.length());
@@ -45,7 +45,7 @@ void drawTapestryRect(char c) {
   }
 
   index ++;
-  if (x < width/tileSize) {
+  if (x < width/tileSize - 1) {
     x++;
   } else {
     x = 0;
@@ -53,8 +53,9 @@ void drawTapestryRect(char c) {
   }
 }
 
-
-
+void mousePressed(){
+  saveFrame("media/"+day()+"-"+month()+"-"+year()+"_"+hour()+"-"+minute()+"-"+second()+".png");
+}
 
 color getColorAtValue(char val) {
   int index = 0;

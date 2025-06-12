@@ -52,6 +52,11 @@ void draw() {
     if (currentMillis - previousMillis > interval)
     {
       UpdateTextFile();
+      drawTapestryRect();
+
+      if (drawText) {
+        drawText();
+      }
       previousMillis = currentMillis;
     }
   }
