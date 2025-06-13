@@ -6,7 +6,7 @@ String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
 
 
 //Parameters------------
-String fileName = "text.txt";
+String fileName = "captions.txt";
 int tileSize = 6;
 boolean drawText = true;
 boolean sortText = false;

@@ -58,8 +58,9 @@ void drawTapestryRect() {
   for (int y = 0; y < width/tileSize; y++) {
     for (int x = 0; x < width/tileSize; x++) {
       if (index < text.length()) {
+        char c = text.charAt(index);
         noStroke();
-        fill(getColorAtValue(text.charAt(index)));
+        fill(getColorAtValue(c));
         rect(x*tileSize, y*tileSize, tileSize, tileSize);
         
         index ++;

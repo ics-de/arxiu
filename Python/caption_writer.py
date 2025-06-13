@@ -3,6 +3,8 @@ import time
 
 r = sr.Recognizer()
 
+captionsPath = "C:/Postgrau/Treball Final/arxiu/Processing/arxiu_SpeechToTapestry/data/captions.txt"
+
 print("Starting real-time captioning...")
 
 while True:
@@ -14,8 +16,9 @@ while True:
         try:
             text = r.recognize_google(audio_data, language="ca-CA")
             print("Recognized:", text)
-            with open("captions.txt", "a", encoding="utf-8") as f:
-                f.write(f"[{time.strftime('%H:%M:%S')}] {text}\n")
+            with open(captionsPath, "a", encoding="utf-8") as f:
+                #f.write(f"[{time.strftime('%H:%M:%S')}] {text}\n")
+                f.write(f"{text}\n")
         except:
             print("Could not understand or connect.")
 

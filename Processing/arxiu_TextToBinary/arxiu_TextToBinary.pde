@@ -10,7 +10,7 @@ boolean trimBinary = true;
 int style = 0;
 
 void setup() {
-  text = textA;
+  //text = textA;
   size(1000, 1000);
   background(0);
   calculateTiles();
@@ -18,12 +18,15 @@ void setup() {
   map = new int[tiles*tiles];
   setMap();
   render();
+
+  delay(100);
+  saveFrame("media/"+day()+"-"+month()+"-"+year()+"_"+hour()+"-"+minute()+"-"+second()+".png");
 }
 
 void draw() {
   background(0);
   delay(50);
-  
+
   //style = int(random(0,4));
   setMap();
   render();
