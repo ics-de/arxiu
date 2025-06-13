@@ -2,7 +2,7 @@ String text = "graner";
 String textA = "L’arxiu és la voluntat i sovint la necessitat de mantenir constància de l’existència d’una informació puntual.";
 String textB = "Sorgeix d’un desig intrínsec humà de preservar coneixements i deixar constància o evidència del passat col·lec";
 String textAscii;
-int tiles = 32;
+int tiles = 8;
 int scale;
 int[] map;
 
