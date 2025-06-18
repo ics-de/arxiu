@@ -6,9 +6,9 @@ String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
 
 
 //Parameters------------
-String fileName = "text.txt";
-int tileSize = 6;
-boolean drawText = true;
+String fileName = "stein01.txt";
+int tileSize = 37;
+boolean drawText = false;
 boolean sortText = false;
 
 //----------------------

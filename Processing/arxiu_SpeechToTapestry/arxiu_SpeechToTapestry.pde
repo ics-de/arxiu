@@ -1,4 +1,4 @@
-//arxiu_TextToTapestry - Oriol Colomer Delgado, 2025
+ //arxiu_TextToTapestry - Oriol Colomer Delgado, 2025
 //
 //arxiu | Treball Final de Postgrau. Postgrau en Escena i Tecnologia Digital, Institut del Teatre (2024-2025)
 
@@ -7,7 +7,7 @@ String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
 
 //Parameters------------
 String fileName = "captions.txt";
-int tileSize = 6;
+int tileSize = 16;
 boolean drawText = true;
 boolean sortText = false;
 boolean updateTextFile = true;

@@ -5,7 +5,7 @@ PImage img;
 SinOsc[] sine;
 Waveform[] waveform;
 
-int waves = 8;
+int waves = 1;
 
 // Define how many samples of the Waveform you want to be able to read at once
 int samples = 100;
@@ -17,7 +17,7 @@ void setup() {
   size(1920, 1080);
   //size(1080,1068);
   
-  img = loadImage("data/img.png");
+  img = loadImage("data/img3.png");
   //img = loadImage("data/img2.jpg");
   background(0);
 
