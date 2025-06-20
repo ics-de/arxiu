@@ -14,10 +14,11 @@ int[] analysisHeights;
 
 void setup() {
 
-  size(1920, 1080);
+  //size(930, 930);
+  size(1920 , 1080);
   //size(1080,1068);
   
-  img = loadImage("data/img3.png");
+  img = loadImage("data/img.png");
   //img = loadImage("data/img2.jpg");
   background(0);
 
@@ -35,7 +36,7 @@ void setup() {
     waveform[w] = new Waveform(this, samples);
     waveform[w].input(sine[w]);
 
-    analysisHeights[w] = int(random(0, height));
+    analysisHeights[w] = int(random(100, height-100));
   }
 }
 
