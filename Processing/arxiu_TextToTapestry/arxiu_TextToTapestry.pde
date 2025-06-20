@@ -6,8 +6,8 @@ String dictionary = "abcçdefghijklmnopqrstuvwxyz1234567890.,'-() ";
 
 
 //Parameters------------
-String fileName = "abstract.txt";
-int tileSize = 30;
+String fileName = "pattern03.txt";
+int tileSize = 32;
 boolean drawText = true;
 boolean sortText = false;
 
@@ -17,7 +17,7 @@ String[] file;
 String text = "";
 
 void setup() {
-  size(990, 990); //text_raw, 930x930 a tileSize = 5
+  size(1000, 1000); //text_raw, 930x930 a tileSize = 5
   colorMode(HSB, 100.0, 100.0, 100.0);
   background(0);
   println("dictionary length: " + dictionary.length());
