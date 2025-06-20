@@ -8,7 +8,7 @@ String dictionary = "abcçdefghijklmnopqrstuvwxyz1234567890.,'-() ";
 //Parameters------------
 String fileName = "abstract.txt";
 int tileSize = 30;
-boolean drawText = false;
+boolean drawText = true;
 boolean sortText = false;
 
 //----------------------
