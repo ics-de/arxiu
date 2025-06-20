@@ -10,7 +10,7 @@ boolean trimBinary = true;
 int style = 0;
 
 void setup() {
-  //text = textA;
+  text = textA;
   size(1000, 1000);
   background(0);
   calculateTiles();
@@ -27,7 +27,7 @@ void draw() {
   background(0);
   delay(50);
 
-  //style = int(random(0,4));
+  style = int(random(0,4));
   setMap();
   render();
 }
@@ -39,10 +39,11 @@ void render() {
     for (int x = 0; x < tiles; x++)
     {
 
-      //style = int(random(0, 4));
+      style = int(random(0, 4));
       drawShape(x, y);
     }
   }
+  
 }
 
 

@@ -2,12 +2,12 @@
 //
 //arxiu | Treball Final de Postgrau. Postgrau en Escena i Tecnologia Digital, Institut del Teatre (2024-2025)
 
-String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
+String dictionary = "abcçdefghijklmnopqrstuvwxyz1234567890.,'-() ";
 
 
 //Parameters------------
-String fileName = "stein01.txt";
-int tileSize = 37;
+String fileName = "abstract.txt";
+int tileSize = 30;
 boolean drawText = false;
 boolean sortText = false;
 
@@ -17,7 +17,7 @@ String[] file;
 String text = "";
 
 void setup() {
-  size(1000, 1000);
+  size(990, 990); //text_raw, 930x930 a tileSize = 5
   colorMode(HSB, 100.0, 100.0, 100.0);
   background(0);
   println("dictionary length: " + dictionary.length());
