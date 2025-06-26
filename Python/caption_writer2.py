@@ -8,7 +8,7 @@ captionsPath = "C:/Postgrau/Treball Final/arxiu/Processing/arxiu_SpeechToTapestr
 print("Starting real-time captioning... Press Ctrl+C to stop.")
 
 with sr.Microphone() as source:
-    r.adjust_for_ambient_noise(source)
+    #r.adjust_for_ambient_noise(source)
     print("Microphone calibrated.")
 
     while True:

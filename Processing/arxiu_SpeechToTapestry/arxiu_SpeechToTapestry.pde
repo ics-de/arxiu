@@ -7,7 +7,7 @@ String dictionary = "abcdefghijklmnopqrstuvwxyz1234567890.,'- ";
 
 //Parameters------------
 String fileName = "captions.txt";
-int tileSize = 18;
+int tileSize = 25;
 boolean drawText = true;
 boolean sortText = false;
 boolean updateTextFile = true;
@@ -23,6 +23,7 @@ int interval = 1000;
 
 void setup() {
   size(1000, 1000);
+  fullScreen(P2D,1);
   colorMode(HSB, 100.0, 100.0, 100.0);
   background(0);
   println("dictionary length: " + dictionary.length());
@@ -41,8 +42,6 @@ void setup() {
     drawText();
   }
 
-  delay(100);
-  saveFrame("media/"+day()+"-"+month()+"-"+year()+"_"+hour()+"-"+minute()+"-"+second()+".png");
 }
 
 void draw() {
@@ -53,13 +52,18 @@ void draw() {
     {
       UpdateTextFile();
       drawTapestryRect();
-
+      
+      //saveFrame("media/"+day()+"-"+month()+"-"+year()+"_"+hour()+"-"+minute()+"-"+second()+".png");
       if (drawText) {
         drawText();
       }
       previousMillis = currentMillis;
     }
   }
+}
+
+void mousePressed(){
+  saveFrame("media/"+day()+"-"+month()+"-"+year()+"_"+hour()+"-"+minute()+"-"+second()+".png");
 }
 
 void drawTapestryPixel() {
